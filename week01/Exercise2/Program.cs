@@ -18,10 +18,6 @@ class Program
 
         if (score >= 90)
         {
-            if (scoreDiv <= 3)
-            {
-                sign = "-";
-            }
             letter= "A";
         }
         else if (score >= 80)
