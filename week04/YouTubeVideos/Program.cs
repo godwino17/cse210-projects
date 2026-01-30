@@ -27,9 +27,6 @@ class Program
         video1._commentsList.Add(comment1b);
         video1._commentsList.Add(comment1c);
         video1._commentsList.Add(comment1d);
-        video1.VideoInfo();
-        video1.DisplayAllCommentOnVideo();
-        video1.TotalCommentOnVideo();
 
         // second video
         Video video2= new Video();
@@ -48,9 +45,6 @@ class Program
         video2._commentsList.Add(comment2a);
         video2._commentsList.Add(comment2b);
         video2._commentsList.Add(comment2c);
-        video2.VideoInfo();
-        video2.DisplayAllCommentOnVideo();
-        video2.TotalCommentOnVideo();
 
         // 3rd video
         Video video3= new Video();
@@ -73,8 +67,15 @@ class Program
         video3._commentsList.Add(comment3b);
         video3._commentsList.Add(comment3c);
         video3._commentsList.Add(comment3d);
-        video3.VideoInfo();
-        video3.DisplayAllCommentOnVideo();
-        video3.TotalCommentOnVideo();
+
+        List<Video> _videoList= new List<Video>();
+        _videoList.Add(video1);
+        _videoList.Add(video2);
+        _videoList.Add(video3);
+
+        foreach (Video video in _videoList)
+        {
+            video.DisplayVideos();
+        }
     }
 }
